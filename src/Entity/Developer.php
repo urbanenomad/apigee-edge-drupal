@@ -52,6 +52,7 @@ use Drupal\user\UserInterface;
  *   query_class = "Drupal\apigee_edge\Entity\Query\DeveloperQuery",
  * )
  */
+#[\AllowDynamicProperties]
 class Developer extends EdgeEntityBase implements DeveloperInterface {
 
   /**
