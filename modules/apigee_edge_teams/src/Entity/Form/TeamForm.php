@@ -163,7 +163,6 @@ class TeamForm extends FieldableEdgeEntityForm implements EdgeEntityFormInterfac
     // We add to any team to make sure team creation works for mint orgs even
     // if they do not enable the m10n teams module.
     if ($this->orgController->isOrganizationApigeeX()) {
-      $team->setAttribute(static::APPGROUP_ADMIN_EMAIL_ATTRIBUTE, '[{"developer":"' . $this->currentUser->getEmail() . '","roles":["admin"]}]');
       global $base_url;
       // Channel url for a team.
       $team->setChannelUri($base_url . '/teams/' . $team->id());
