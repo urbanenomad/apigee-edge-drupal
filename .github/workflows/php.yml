@@ -38,6 +38,7 @@ jobs:
         drupal-core:
           # Should update the following as the minimum supported version from Drupal.org
           - "10.2.x"
+          - "10.3.x"
         instance-type:
           - "Edge"
           - "X"
@@ -94,7 +95,6 @@ jobs:
         composer config --no-plugins allow-plugins.cweagans/composer-patches true
         composer config --no-plugins allow-plugins.php-http/discovery true        
         composer config minimum-stability dev
-        composer require 'drupal/rules:3.x-dev@dev'
         composer require wikimedia/composer-merge-plugin
         composer config --json extra.merge-plugin.require '["modules/contrib/apigee_edge/composer.json"]'
         composer config platform.php ${{ matrix.php-version }}
@@ -103,6 +103,20 @@ jobs:
         composer require --dev phpspec/prophecy-phpunit:^2
         composer require --dev drupal/classy:^1.0
         composer config --no-plugins allow-plugins.drupal/console-extend-plugin true
+
+    - name: "Allow plugins and dev dependencies for Drupal 10.2"
+      if: ${{ matrix.drupal-core == '10.2.x' }}
+      run: |
+        cd drupal
+        composer require 'drupal/rules:3.x-dev@dev'
+        composer update --with-all-dependencies
+
+    - name: "Allow plugins and dev dependencies for Drupal 10.3"
+      if: ${{ matrix.drupal-core == '10.3.x' }}
+      run: |
+        cd drupal
+        composer require 'drupal/rules:^4.0'
+        composer update --with-all-dependencies
 
     # Install drupal using minimal installation profile and enable the module.
     - name: Install Drupal
@@ -124,7 +138,8 @@ jobs:
         echo "APIGEE_EDGE_ENDPOINT=$APIGEE_EDGE_HYBRID_ENDPOINT" >> $GITHUB_ENV
         composer show > composer-show.txt
 
-    - name: "Drupal check"
+    - name: "Drupal check for Drupal 10.2"
+      if: ${{ matrix.drupal-core == '10.2.x' }}
       run: |
         cd drupal
         vendor/bin/drupal-check modules/contrib/apigee_edge
