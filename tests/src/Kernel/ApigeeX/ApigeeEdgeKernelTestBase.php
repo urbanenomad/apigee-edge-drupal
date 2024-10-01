@@ -19,9 +19,9 @@
 
 namespace Drupal\Tests\apigee_edge\Kernel\ApigeeX;
 
+use Drupal\KernelTests\KernelTestBase;
 use Drupal\apigee_edge\OauthTokenFileStorage;
 use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
-use Drupal\KernelTests\KernelTestBase;
 
 /**
  * Base class for kernel tests.

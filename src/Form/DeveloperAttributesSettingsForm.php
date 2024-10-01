@@ -19,13 +19,13 @@
 
 namespace Drupal\apigee_edge\Form;
 
-use Drupal\apigee_edge\FieldAttributeConverter;
-use Drupal\apigee_edge\Plugin\FieldStorageFormatManagerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use Drupal\apigee_edge\FieldAttributeConverter;
+use Drupal\apigee_edge\Plugin\FieldStorageFormatManagerInterface;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\FieldConfigInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;

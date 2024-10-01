@@ -19,9 +19,9 @@
 
 namespace Drupal\Tests\apigee_edge\FunctionalJavascript;
 
-use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\Tests\apigee_edge\Traits\ApigeeEdgeFunctionalTestTrait;
+use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 
 /**
  * Base class for functional javascript tests.

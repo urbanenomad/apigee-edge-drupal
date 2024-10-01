@@ -19,10 +19,9 @@
 
 namespace Drupal\Tests\apigee_edge_teams\Functional\ApigeeX;
 
+use Drupal\Core\Url;
 use Drupal\apigee_edge\Entity\Developer;
 use Drupal\apigee_edge_teams\Entity\TeamRoleInterface;
-use Drupal\Core\Url;
-use Drupal\Tests\apigee_mock_api_client\Traits\ApigeeMockApiClientHelperTrait;
 use Drupal\views\Views;
 
 /**

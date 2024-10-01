@@ -19,10 +19,10 @@
 
 namespace Drupal\apigee_edge\Form;
 
-use Drupal\apigee_edge\SDKConnectorInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use Drupal\apigee_edge\SDKConnectorInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**

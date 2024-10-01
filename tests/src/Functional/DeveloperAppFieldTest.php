@@ -21,14 +21,14 @@ namespace Drupal\Tests\apigee_edge\Functional;
 
 use Apigee\Edge\Api\Management\Controller\DeveloperAppController;
 use Apigee\Edge\Api\Management\Entity\App;
-use Drupal\apigee_edge\Entity\Developer;
-use Drupal\apigee_edge\Entity\DeveloperApp;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Url;
+use Drupal\Tests\field_ui\Traits\FieldUiTestTrait;
+use Drupal\apigee_edge\Entity\Developer;
+use Drupal\apigee_edge\Entity\DeveloperApp;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
-use Drupal\Tests\field_ui\Traits\FieldUiTestTrait;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -184,7 +184,7 @@ class DeveloperAppFieldTest extends ApigeeEdgeFunctionalTestBase {
         'encoded' => implode(',', [
           round(M_PI, 10),
           round(M_E, 10),
-          round(M_EULER, 10)
+          round(M_EULER, 10),
         ]),
       ],
       strtolower($this->randomMachineName()) => [
@@ -250,7 +250,7 @@ class DeveloperAppFieldTest extends ApigeeEdgeFunctionalTestBase {
         ],
         'data' => [
           0 => 'Zero',
-          1 => 'One'
+          1 => 'One',
         ],
         'encoded' => '0,1',
       ],
@@ -264,7 +264,7 @@ class DeveloperAppFieldTest extends ApigeeEdgeFunctionalTestBase {
         ],
         'data' => [
           'zero' => 'Zero',
-          'one' => 'One'
+          'one' => 'One',
         ],
         'encoded' => 'zero,one',
       ],
@@ -281,10 +281,10 @@ class DeveloperAppFieldTest extends ApigeeEdgeFunctionalTestBase {
         'data' => [
           '0' => 'Zero',
           '0.5' => 'Point five',
-          '2' => 'Two'
+          '2' => 'Two',
         ],
         'encoded' => '0.5',
-      ]
+      ],
     ];
 
     // Changes for field of types 'list' fields
@@ -352,12 +352,12 @@ class DeveloperAppFieldTest extends ApigeeEdgeFunctionalTestBase {
       /**
        * {@inheritdoc}
        */
-      public function resetCache(array $ids = NULL) {}
+      public function resetCache(?array $ids = NULL) {}
 
       /**
        * {@inheritdoc}
        */
-      public function loadMultiple(array $ids = NULL) {}
+      public function loadMultiple(?array $ids = NULL) {}
 
       /**
        * {@inheritdoc}

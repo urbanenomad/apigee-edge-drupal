@@ -19,8 +19,8 @@
 
 namespace Drupal\Tests\apigee_edge_teams\Functional;
 
-use Drupal\apigee_edge_teams\Entity\TeamRoleInterface;
 use Drupal\Core\Url;
+use Drupal\apigee_edge_teams\Entity\TeamRoleInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Route;
 

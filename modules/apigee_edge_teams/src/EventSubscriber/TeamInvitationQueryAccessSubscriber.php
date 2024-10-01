@@ -20,8 +20,8 @@
 
 namespace Drupal\apigee_edge_teams\EventSubscriber;
 
-use Drupal\apigee_edge\Entity\Controller\OrganizationControllerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\apigee_edge\Entity\Controller\OrganizationControllerInterface;
 use Drupal\entity\QueryAccess\QueryAccessEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 

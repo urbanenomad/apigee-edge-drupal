@@ -20,12 +20,11 @@
 
 namespace Drupal\Tests\apigee_edge_teams\Kernel\ApigeeX;
 
-use Drupal\apigee_edge_teams\Entity\Team;
+use Drupal\Tests\apigee_edge\Kernel\ApigeeX\ApigeeEdgeKernelTestBase;
+use Drupal\Tests\apigee_mock_api_client\Traits\ApigeeMockApiClientHelperTrait;
 use Drupal\apigee_edge_teams\Entity\TeamInvitation;
 use Drupal\apigee_edge_teams\Entity\TeamInvitationInterface;
 use Drupal\apigee_edge_teams\Entity\TeamRoleInterface;
-use Drupal\Tests\apigee_edge\Kernel\ApigeeX\ApigeeEdgeKernelTestBase;
-use Drupal\Tests\apigee_mock_api_client\Traits\ApigeeMockApiClientHelperTrait;
 
 /**
  * Tests team_invitation events.

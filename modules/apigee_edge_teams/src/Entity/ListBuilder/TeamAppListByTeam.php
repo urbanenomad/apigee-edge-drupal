@@ -20,8 +20,6 @@
 
 namespace Drupal\apigee_edge_teams\Entity\ListBuilder;
 
-use Drupal\apigee_edge\Entity\AppWarningsCheckerInterface;
-use Drupal\apigee_edge\Entity\ListBuilder\AppListBuilder;
 use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
@@ -31,6 +29,8 @@ use Drupal\Core\Entity\Query\QueryInterface;
 use Drupal\Core\Render\RendererInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\apigee_edge\Entity\AppWarningsCheckerInterface;
+use Drupal\apigee_edge\Entity\ListBuilder\AppListBuilder;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -66,7 +66,7 @@ class TeamAppListByTeam extends AppListBuilder implements ContainerInjectionInte
    * @param \Drupal\apigee_edge\Entity\AppWarningsCheckerInterface $app_warnings_checker
    *   The app warnings checker service.
    */
-  public function __construct(EntityTypeInterface $entity_type, EntityTypeManagerInterface $entity_type_manager, RendererInterface $render, RequestStack $request_stack, TimeInterface $time, RouteMatchInterface $route_match, ConfigFactoryInterface $config_factory = NULL, AppWarningsCheckerInterface $app_warnings_checker) {
+  public function __construct(EntityTypeInterface $entity_type, EntityTypeManagerInterface $entity_type_manager, RendererInterface $render, RequestStack $request_stack, TimeInterface $time, RouteMatchInterface $route_match, ?ConfigFactoryInterface $config_factory = NULL, AppWarningsCheckerInterface $app_warnings_checker) {
     if (!$config_factory) {
       $config_factory = \Drupal::service('config.factory');
     }

@@ -19,9 +19,9 @@
 
 namespace Drupal\Tests\apigee_edge\Functional;
 
-use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Url;
+use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 use Drupal\key\Entity\Key;
 
 /**

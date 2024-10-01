@@ -19,8 +19,8 @@
 
 namespace Drupal\Tests\apigee_edge\Kernel;
 
-use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 use Drupal\KernelTests\KernelTestBase;
+use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 
 /**
  * Base class for kernel tests.

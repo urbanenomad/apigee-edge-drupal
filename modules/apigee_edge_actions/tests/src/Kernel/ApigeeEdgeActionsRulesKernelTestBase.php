@@ -20,11 +20,11 @@
 
 namespace Drupal\Tests\apigee_edge_actions\Kernel;
 
-use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 use Drupal\Core\Database\Database;
-use Drupal\dblog\Controller\DbLogController;
 use Drupal\Tests\apigee_mock_api_client\Traits\ApigeeMockApiClientHelperTrait;
 use Drupal\Tests\rules\Kernel\RulesKernelTestBase;
+use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
+use Drupal\dblog\Controller\DbLogController;
 use Drupal\user\Entity\User;
 use Symfony\Component\HttpFoundation\Response;
 

@@ -21,18 +21,18 @@
 namespace Drupal\apigee_edge_teams\Entity\Form;
 
 use Apigee\Edge\Exception\ApiException;
-use Drupal\apigee_edge\Entity\Controller\OrganizationControllerInterface;
-use Drupal\apigee_edge\Entity\Form\EdgeEntityFormInterface;
-use Drupal\apigee_edge\Entity\Form\FieldableEdgeEntityForm;
-use Drupal\apigee_edge_teams\Entity\TeamRoleInterface;
-use Drupal\apigee_edge_teams\Form\TeamAliasForm;
-use Drupal\apigee_edge_teams\TeamMembershipManagerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Logger\LoggerChannelInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Utility\Error;
+use Drupal\apigee_edge\Entity\Controller\OrganizationControllerInterface;
+use Drupal\apigee_edge\Entity\Form\EdgeEntityFormInterface;
+use Drupal\apigee_edge\Entity\Form\FieldableEdgeEntityForm;
+use Drupal\apigee_edge_teams\Entity\TeamRoleInterface;
+use Drupal\apigee_edge_teams\Form\TeamAliasForm;
+use Drupal\apigee_edge_teams\TeamMembershipManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -268,7 +268,7 @@ class TeamForm extends FieldableEdgeEntityForm implements EdgeEntityFormInterfac
       try {
         if (!$this->orgController->isOrganizationApigeeX()) {
           $this->teamMembershipManager->addMembers($team->id(), [
-            $this->currentUser->getEmail()
+            $this->currentUser->getEmail(),
           ]);
         }
 

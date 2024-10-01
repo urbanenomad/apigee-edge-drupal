@@ -21,10 +21,10 @@ namespace Drupal\apigee_edge\Plugin\KeyInput;
 
 use Apigee\Edge\ClientInterface;
 use Apigee\Edge\HttpClient\Plugin\Authentication\Oauth;
-use Drupal\apigee_edge\Connector\GceServiceAccountAuthentication;
-use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\apigee_edge\Connector\GceServiceAccountAuthentication;
+use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 use Drupal\key\Plugin\KeyInputBase;
 use Http\Client\Exception;
 

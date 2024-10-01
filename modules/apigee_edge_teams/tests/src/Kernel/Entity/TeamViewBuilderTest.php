@@ -58,7 +58,7 @@ class TeamViewBuilderTest extends ApigeeEdgeKernelTestBase {
     'apigee_mock_api_client',
     'key',
     'user',
-    'options'
+    'options',
   ];
 
   /**

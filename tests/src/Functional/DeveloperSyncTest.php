@@ -20,13 +20,13 @@
 namespace Drupal\Tests\apigee_edge\Functional;
 
 use Apigee\Edge\Api\Management\Controller\DeveloperController;
+use Drupal\Core\Url;
+use Drupal\Tests\field_ui\Traits\FieldUiTestTrait;
 use Drupal\apigee_edge\Entity\Developer;
 use Drupal\apigee_edge\Plugin\ApigeeFieldStorageFormat\CSV;
 use Drupal\apigee_edge\Plugin\ApigeeFieldStorageFormat\JSON;
-use Drupal\Core\Url;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
-use Drupal\Tests\field_ui\Traits\FieldUiTestTrait;
 use Drupal\user\Entity\User;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\BufferedOutput;
@@ -399,14 +399,14 @@ class DeveloperSyncTest extends ApigeeEdgeFunctionalTestBase {
         ],
         'data' => [
           0 => 'Zero',
-          1 => 'One'
+          1 => 'One',
         ],
         'odata' => [
           ['value' => 0],
-          ['value' => 1]
+          ['value' => 1],
         ],
         'data_changed' => [
-          ['value' => 2]
+          ['value' => 2],
         ],
       ],
       'list_string' => [
@@ -419,14 +419,14 @@ class DeveloperSyncTest extends ApigeeEdgeFunctionalTestBase {
         ],
         'data' => [
           'zero' => 'Zero',
-          'one' => 'One'
+          'one' => 'One',
         ],
         'odata' => [
           ['value' => 'zero'],
-          ['value' => 'one']
+          ['value' => 'one'],
         ],
         'data_changed' => [
-          ['value' => 'two']
+          ['value' => 'two'],
         ],
       ],
       'list_float' => [
@@ -442,15 +442,15 @@ class DeveloperSyncTest extends ApigeeEdgeFunctionalTestBase {
         'data' => [
           '0' => 'Zero',
           '0.5' => 'Point five',
-          '2' => 'Two'
+          '2' => 'Two',
         ],
         'odata' => [
-          ['value' => 0.5]
+          ['value' => 0.5],
         ],
         'data_changed' => [
-          ['value' => 0.8]
+          ['value' => 0.8],
         ],
-      ]
+      ],
     ];
 
     // Changes for field of types 'list' fields

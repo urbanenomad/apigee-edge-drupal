@@ -21,7 +21,6 @@ namespace Drupal\Tests\apigee_edge_teams\Functional\ApigeeX;
 
 use Apigee\Edge\Structure\AttributesProperty;
 use Drupal\Core\Session\UserSession;
-use Drupal\user\Entity\User;
 
 /**
  * Team membership manager service test.
@@ -94,7 +93,7 @@ class TeamMembershipManagerTest extends ApigeeEdgeTeamsFunctionalTestBase {
       'name' => $this->getRandomGenerator()->name(),
       'attributes' => new AttributesProperty([
         'name' => '__apigee_reserved__developer_details',
-        'value' => '[{\"developer\":\"doe@example.com\",\"roles\":[\"admin\"]}]'
+        'value' => '[{\"developer\":\"doe@example.com\",\"roles\":[\"admin\"]}]',
       ]),
     ]);
     $this->team->save();

@@ -20,8 +20,6 @@
 
 namespace Drupal\apigee_edge\Entity\ListBuilder;
 
-use Drupal\apigee_edge\Entity\AppInterface;
-use Drupal\apigee_edge\Entity\AppWarningsCheckerInterface;
 use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\NestedArray;
@@ -32,6 +30,8 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Render\RendererInterface;
 use Drupal\Core\Url;
+use Drupal\apigee_edge\Entity\AppInterface;
+use Drupal\apigee_edge\Entity\AppWarningsCheckerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -94,7 +94,7 @@ class AppListBuilder extends EdgeEntityListBuilder {
    * @param \Drupal\apigee_edge\Entity\AppWarningsCheckerInterface $app_warnings_checker
    *   The app warnings checker service.
    */
-  public function __construct(EntityTypeInterface $entity_type, EntityTypeManagerInterface $entity_type_manager, RendererInterface $renderer, RequestStack $request_stack, TimeInterface $time, ConfigFactoryInterface $config_factory = NULL, AppWarningsCheckerInterface $app_warnings_checker) {
+  public function __construct(EntityTypeInterface $entity_type, EntityTypeManagerInterface $entity_type_manager, RendererInterface $renderer, RequestStack $request_stack, TimeInterface $time, ?ConfigFactoryInterface $config_factory = NULL, AppWarningsCheckerInterface $app_warnings_checker) {
     if (!$config_factory) {
       $config_factory = \Drupal::service('config.factory');
     }

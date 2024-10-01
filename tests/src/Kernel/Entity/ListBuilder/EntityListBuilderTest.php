@@ -60,7 +60,7 @@ class EntityListBuilderTest extends ApigeeEdgeKernelTestBase {
     'apigee_mock_api_client',
     'key',
     'user',
-    'options'
+    'options',
   ];
 
   /**
@@ -140,7 +140,7 @@ class EntityListBuilderTest extends ApigeeEdgeKernelTestBase {
     $this->app = $this->createDeveloperApp();
     $this->stack->queueMockResponse([
       'get_developer_apps' => [
-        'apps' => [$this->app]
+        'apps' => [$this->app],
       ],
     ]);
 

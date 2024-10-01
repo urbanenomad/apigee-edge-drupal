@@ -19,8 +19,8 @@
 
 namespace Drupal\Tests\apigee_edge_teams\Functional\ApigeeX;
 
-use Drupal\apigee_edge\OauthTokenFileStorage;
 use Drupal\Tests\apigee_edge\Functional\ApigeeX\ApigeeEdgeFunctionalTestBase;
+use Drupal\apigee_edge\OauthTokenFileStorage;
 
 /**
  * Base class for Apigee Edge Teams functional tests.

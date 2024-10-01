@@ -23,8 +23,8 @@ namespace Drupal\apigee_edge_teams\Entity;
 use Apigee\Edge\Api\ApigeeX\Entity\AppGroupApp;
 use Apigee\Edge\Api\Management\Entity\CompanyApp;
 use Apigee\Edge\Entity\EntityInterface as EdgeEntityInterface;
-use Drupal\apigee_edge\Entity\App;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\apigee_edge\Entity\App;
 
 /**
  * Defines the Team (company) app entity class.

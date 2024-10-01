@@ -20,9 +20,9 @@
 namespace Drupal\Tests\apigee_edge_teams\Functional\ApigeeX;
 
 use Apigee\Edge\Structure\AttributesProperty;
+use Drupal\Core\Url;
 use Drupal\apigee_edge_teams\Entity\TeamApp;
 use Drupal\apigee_edge_teams\Entity\TeamRoleInterface;
-use Drupal\Core\Url;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Route;
 
@@ -237,7 +237,7 @@ class AccessTest extends ApigeeEdgeTeamsFunctionalTestBase {
       'name' => mb_strtolower($this->getRandomGenerator()->name()),
       'attributes' => new AttributesProperty([
         'name' => '__apigee_reserved__developer_details',
-        'value' => '[{\"developer\":\"doe@example.com\",\"roles\":[\"admin\"]}]'
+        'value' => '[{\"developer\":\"doe@example.com\",\"roles\":[\"admin\"]}]',
       ]),
     ]);
     $this->team->save();

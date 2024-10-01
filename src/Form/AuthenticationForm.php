@@ -20,12 +20,12 @@
 
 namespace Drupal\apigee_edge\Form;
 
-use Drupal\apigee_edge\Exception\KeyProviderRequirementsException;
-use Drupal\apigee_edge\Plugin\KeyProviderRequirementsInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Config\Entity\ConfigEntityStorageInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\apigee_edge\Exception\KeyProviderRequirementsException;
+use Drupal\apigee_edge\Plugin\KeyProviderRequirementsInterface;
 use Drupal\key\Form\KeyEditForm;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

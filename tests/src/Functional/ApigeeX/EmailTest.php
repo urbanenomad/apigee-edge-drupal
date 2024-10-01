@@ -19,9 +19,8 @@
 
 namespace Drupal\Tests\apigee_edge\Functional\ApigeeX;
 
-use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 use Drupal\Core\Url;
-use Drupal\Tests\apigee_edge\Functional\ApigeeX\ApigeeEdgeFunctionalTestBase;
+use Drupal\apigee_edge\Plugin\EdgeKeyTypeInterface;
 
 /**
  * Developer email already exists in Apigee Edge related tests.
@@ -49,7 +48,6 @@ class EmailTest extends ApigeeEdgeFunctionalTestBase {
     $this->addApigeexOrganizationMatchedResponse();
 
     // Admin user editing self email.
-
     $this->drupalLogin($this->rootUser);
     $edit = [
       'name' => $this->randomMachineName(),
@@ -75,7 +73,6 @@ class EmailTest extends ApigeeEdgeFunctionalTestBase {
     $this->assertSession()->pageTextContains('This email address accepts only lowercase characters.');
 
     // Admin user creating a new user.
-
     $adminuserCreate = [
       'name' => $this->randomMachineName(),
       'mail' => 'aB' . $this->getRandomGenerator()->word(8) . '@example.com',
@@ -91,7 +88,6 @@ class EmailTest extends ApigeeEdgeFunctionalTestBase {
     $this->drupalLogout();
 
     // Anonmyous user creating new account.
-
     $userRegister = [
       'name' => $this->randomMachineName(),
       'mail' => 'xYZ' . $this->getRandomGenerator()->word(8) . '@example.com',

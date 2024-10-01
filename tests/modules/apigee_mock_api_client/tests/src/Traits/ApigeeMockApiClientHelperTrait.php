@@ -26,13 +26,13 @@ use Apigee\Edge\Api\Management\Entity\Organization;
 use Apigee\Edge\Structure\AddonsConfig;
 use Apigee\Edge\Structure\MonetizationConfig;
 use Apigee\MockClient\Generator\ApigeeSdkEntitySource;
+use Drupal\Tests\apigee_edge\Traits\ApigeeEdgeUtilTestTrait;
 use Drupal\apigee_edge\Entity\Developer;
 use Drupal\apigee_edge\Entity\DeveloperApp;
 use Drupal\apigee_edge\Entity\DeveloperAppInterface;
 use Drupal\apigee_edge\Entity\DeveloperInterface;
 use Drupal\apigee_edge_teams\Entity\Team;
 use Drupal\apigee_edge_teams\Entity\TeamInterface;
-use Drupal\Tests\apigee_edge\Traits\ApigeeEdgeUtilTestTrait;
 use Drupal\user\UserInterface;
 use Http\Message\RequestMatcher\RequestMatcher;
 
@@ -140,9 +140,9 @@ trait ApigeeMockApiClientHelperTrait {
       'runtimeType'   => $runtimeType,
       'addonsConfig'  => new AddonsConfig([
         'monetizationConfig' => new MonetizationConfig([
-          'enabled' => 'true'
-        ])
-      ])
+          'enabled' => 'true',
+        ]),
+      ]),
     ]);
 
     $this->stack->on(
